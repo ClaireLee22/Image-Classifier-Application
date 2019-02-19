@@ -58,15 +58,15 @@ python predict.py /path/to/image checkpoint
 - Options:
   - Return top K most likely classes:
    ```bash
-  python predict.py input checkpoint --top_k 5
+  python predict.py input checkpoint --topk 5
    ```
   - Use a mapping of categories to real names: 
    ```bash
-  python predict.py input checkpoint --category_names cat_to_name.json
+  python predict.py input checkpoint --category_name cat_to_name.json
    ```
   - Use GPU for inference: 
    ```bash
-  python predict.py input checkpoint --gpu
+  python predict.py input checkpoint --device GPU
    ```
 
 ### Data
