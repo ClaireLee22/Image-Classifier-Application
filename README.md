@@ -41,8 +41,6 @@ jupyter notebook dlnd_tv_script_generation.ipynb
 This will open the iPython Notebook software and project file in your browser.
 
 ### Data
-[Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html)
-```bash
-flower/
-```
+Download [Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html) 
+
 A 102 category dataset, consisting of 102 flower categories.
