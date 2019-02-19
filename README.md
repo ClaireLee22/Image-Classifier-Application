@@ -51,15 +51,23 @@ python train.py data_directory
   ```
 
 ### Predict flower name with `predict.py`
-Basic usage: python predict.py /path/to/image checkpoint
-Options:
-Return top KK most likely classes: python predict.py input checkpoint --top_k 3
-Use a mapping of categories to real names: python predict.py input checkpoint --category_names cat_to_name.json
-Use GPU for inference: python predict.py input checkpoint --gpu
-
-```bash
-jupyter notebook dlnd_tv_script_generation.ipynb
-```
+- Basic usage: 
+ ```bash
+python predict.py /path/to/image checkpoint
+ ```
+- Options:
+  - Return top K most likely classes:
+   ```bash
+  python predict.py input checkpoint --top_k 5
+   ```
+  - Use a mapping of categories to real names: 
+   ```bash
+  python predict.py input checkpoint --category_names cat_to_name.json
+   ```
+  - Use GPU for inference: 
+   ```bash
+  python predict.py input checkpoint --gpu
+   ```bash
 
 ### Data
 Download [Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html) 
