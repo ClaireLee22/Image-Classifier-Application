@@ -34,21 +34,21 @@ python train.py data_directory
 ```
 - Options:
   - Set directory to save checkpoints: 
-```bash
-python train.py data_dir --save_dir save_directory
-```
+  ```bash
+  python train.py data_dir --save_dir save_directory
+  ```
   - Choose architecture:
-```bash
-python train.py data_dir --arch "vgg16"
-```
-  - Set hyperparameters: 
-```bash
-python train.py data_dir --learning_rate 0.01 --hidden_units 512 --epochs 20
-```
-  - Use GPU for training: 
-```bash
-python train.py data_dir --device GPU
-```
+  ```bash
+  python train.py data_dir --arch "vgg16"
+  ```
+    - Set hyperparameters: 
+  ```bash
+  python train.py data_dir --learning_rate 0.01 --hidden_units 512 --epochs 20
+  ```
+    - Use GPU for training: 
+  ```bash
+  python train.py data_dir --device GPU
+  ```
 
 ### Predict flower name with `predict.py`
 Basic usage: python predict.py /path/to/image checkpoint
