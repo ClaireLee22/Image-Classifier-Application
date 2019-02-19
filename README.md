@@ -37,7 +37,7 @@ Set hyperparameters: python train.py data_dir --learning_rate 0.01 --hidden_unit
 Use GPU for training: python train.py data_dir --gpu
 
 
-### Predict flower name with predict.py
+### Predict flower name with `predict.py`
 
 ```bash
 jupyter notebook dlnd_tv_script_generation.ipynb
