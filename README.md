@@ -9,7 +9,7 @@ Transfer learning project [AI Programming with Python Nanodegree]
 ### Project Procedure
 - Load and preprocess the data
 - Build network
-  - Load the pretrained model: vgg16
+  - Load the pretrained model: vgg16/alexnet
   - Define a new classifer
 - Train the classifer
 - Test the network
@@ -26,19 +26,22 @@ Transfer learning project [AI Programming with Python Nanodegree]
 ### Prerequisites
 - [PyTorch 4.0](https://pytorch.org/get-started/locally/)
 
-### Train a new network with train3.py
-### Predict flower name with predict3.py
-In a terminal or command window, run one of the following commands:
+### Train a new network with `train.py`
 
-```bash
-ipython notebook dlnd_tv_script_generation.ipynb
-```  
-or
+Basic usage: python train.py data_directory
+Prints out training loss, validation loss, and validation accuracy as the network trains
+Options:
+Set directory to save checkpoints: python train.py data_dir --save_dir save_directory
+Choose architecture: python train.py data_dir --arch "vgg13"
+Set hyperparameters: python train.py data_dir --learning_rate 0.01 --hidden_units 512 --epochs 20
+Use GPU for training: python train.py data_dir --gpu
+
+
+### Predict flower name with predict.py
+
 ```bash
 jupyter notebook dlnd_tv_script_generation.ipynb
 ```
-
-This will open the iPython Notebook software and project file in your browser.
 
 ### Data
 Download [Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html) 
