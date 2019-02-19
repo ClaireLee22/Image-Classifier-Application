@@ -20,7 +20,7 @@ Transfer learning project [AI Programming with Python Nanodegree]
 
 ### Project Results
 - Train an classifier which can predict the class for an input flower image.
-- Build the command line application
+- Build the command line application.
   - Allow users to choose different hyperparametrs to train their own classifers. 
   - Make predictions for input flower images using the classifer they have trained.
 
