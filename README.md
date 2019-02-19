@@ -42,5 +42,7 @@ This will open the iPython Notebook software and project file in your browser.
 
 ### Data
 [Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html)
-
+```bash
+flower/
+```
 A 102 category dataset, consisting of 102 flower categories.
