@@ -3,27 +3,31 @@ Transfer learning project [AI Programming with Python Nanodegree]
 
 ## Projcet Overview
 ### Project Description
-Use vgg16 pretrained model to train an image classifier to recognize different species of flowers. Then convert it into a command line application.
+- Train an image classifier to recognize different species of flowers.
+- Build a command line application of the image classifier.
 
 ### Project Procedure
-- Preprocess the data
-  - Transform words to ids
-  - Tokenize punctuation
-- Create lookup table
-- Build RNN
-- Train RNN
-- Generate TV script
+- Load and preprocess the data
+- Build network
+  - Load the pretrained model: vgg16
+  - Define a new classifer
+- Train the classifer
+- Test the network
+- Make a prediction
+- Save the checkpoint
 
 ### Project Results
-- Generated TV script for a scene at Moe's Tavern successfully.
-- Need to get more data to train to get a better results.
-
+- Train an classifier which can predict the class for an input flower image.
+- Build the command line application
+  - Allow users to choose different hyperparametrs to train their own classifers. 
+  - Make predictions for input flower images using the classifer they have trained.
 
 ## Getting Started
 ### Prerequisites
 - [PyTorch 4.0](https://pytorch.org/get-started/locally/)
 
-### Run
+### Train a new network with train3.py
+### Predict flower name with predict3.py
 In a terminal or command window, run one of the following commands:
 
 ```bash
@@ -37,7 +41,6 @@ jupyter notebook dlnd_tv_script_generation.ipynb
 This will open the iPython Notebook software and project file in your browser.
 
 ### Data
-```bash
-data/simpsons/moes_tavern_lines.txt
-```  
-Part of the Simpsons dataset of scripts which consists of only the scenes in Moe's Tavern.
+[Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html)
+
+A 102 category dataset, consisting of 102 flower categories.
