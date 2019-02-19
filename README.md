@@ -67,7 +67,7 @@ python predict.py /path/to/image checkpoint
   - Use GPU for inference: 
    ```bash
   python predict.py input checkpoint --gpu
-   ```bash
+   ```
 
 ### Data
 Download [Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html) 
