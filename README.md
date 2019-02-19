@@ -28,30 +28,34 @@ Transfer learning project [AI Programming with Python Nanodegree]
 
 ### Train a new network with `train.py`
 
-Basic usage: 
+- Basic usage: 
 ```bash
 python train.py data_directory
 ```
-Options:
-Set directory to save checkpoints: 
+- Options:
+  - Set directory to save checkpoints: 
 ```bash
 python train.py data_dir --save_dir save_directory
 ```
-Choose architecture:
-Set directory to save checkpoints: 
+  - Choose architecture:
 ```bash
-python train.py data_dir --arch "vgg13"
+python train.py data_dir --arch "vgg16"
 ```
-Set hyperparameters: 
+  - Set hyperparameters: 
 ```bash
 python train.py data_dir --learning_rate 0.01 --hidden_units 512 --epochs 20
 ```
-Use GPU for training: 
+  - Use GPU for training: 
 ```bash
-python train.py data_dir --gpu
+python train.py data_dir --device GPU
 ```
 
 ### Predict flower name with `predict.py`
+Basic usage: python predict.py /path/to/image checkpoint
+Options:
+Return top KK most likely classes: python predict.py input checkpoint --top_k 3
+Use a mapping of categories to real names: python predict.py input checkpoint --category_names cat_to_name.json
+Use GPU for inference: python predict.py input checkpoint --gpu
 
 ```bash
 jupyter notebook dlnd_tv_script_generation.ipynb
