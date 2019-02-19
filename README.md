@@ -6,10 +6,12 @@ Transfer learning project [AI Programming with Python Nanodegree]
 - Train an image classifier to recognize different species of flowers.
 - Build a command line application of the image classifier.
 
+<img src='assets/image_classifier.gif'>
+
 ### Project Procedure
 - Load and preprocess the data
 - Build network
-  - Load the pretrained model: vgg16
+  - Load the pretrained model: vgg16/alexnet
   - Define a new classifer
 - Train the classifer
 - Test the network
@@ -26,21 +28,50 @@ Transfer learning project [AI Programming with Python Nanodegree]
 ### Prerequisites
 - [PyTorch 4.0](https://pytorch.org/get-started/locally/)
 
-### Train a new network with train3.py
-### Predict flower name with predict3.py
-In a terminal or command window, run one of the following commands:
+### Train a new network with `train.py`
 
+- Basic usage: 
 ```bash
-ipython notebook dlnd_tv_script_generation.ipynb
-```  
-or
-```bash
-jupyter notebook dlnd_tv_script_generation.ipynb
+python train.py data_directory
 ```
+- Options:
+  - Set directory to save checkpoints: 
+  ```bash
+  python train.py data_dir --save_dir save_directory
+  ```
+  - Choose architecture:
+  ```bash
+  python train.py data_dir --arch "vgg16"
+  ```
+    - Set hyperparameters: 
+  ```bash
+  python train.py data_dir --learning_rate 0.01 --hidden_units 512 --epochs 20
+  ```
+    - Use GPU for training: 
+  ```bash
+  python train.py data_dir --device GPU
+  ```
 
-This will open the iPython Notebook software and project file in your browser.
+### Predict flower name with `predict.py`
+- Basic usage: 
+ ```bash
+python predict.py /path/to/image checkpoint
+ ```
+- Options:
+  - Return top K most likely classes:
+   ```bash
+  python predict.py input checkpoint --topk 5
+   ```
+  - Use a mapping of categories to real names: 
+   ```bash
+  python predict.py input checkpoint --category_name cat_to_name.json
+   ```
+  - Use GPU for inference: 
+   ```bash
+  python predict.py input checkpoint --device GPU
+   ```
 
 ### Data
-[Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html)
+Download [Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html) 
 
 A 102 category dataset, consisting of 102 flower categories.
