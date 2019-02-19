@@ -6,6 +6,8 @@ Transfer learning project [AI Programming with Python Nanodegree]
 - Train an image classifier to recognize different species of flowers.
 - Build a command line application of the image classifier.
 
+<img src='assets/image_classifier.gif'>
+
 ### Project Procedure
 - Load and preprocess the data
 - Build network
